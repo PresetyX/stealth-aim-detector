@@ -1,0 +1,42 @@
+# Configurações do Stealth AI Detector
+
+# Tela
+screen:
+  width: 1920
+  height: 1080
+
+# Detecção
+detection:
+  capture_size: 640  # Tamanho da área de captura (quadrado)
+  confidence_threshold: 0.5  # Mínimo de confiança (0-1)
+  target_classes: [0]  # IDs das classes alvo (ajuste conforme seu modelo)
+
+# Modelo YOLO/ONNX
+model:
+  path: "models/yolov8n.onnx"  # Caminho para o modelo ONNX
+  cuda_device: 0  # ID da GPU (0 = primeira GPU)
+
+# Comunicação Serial
+serial:
+  port: "COM3"  # Porta do Arduino (COM3, COM4, etc)
+  baudrate: 115200
+
+# Controle de mira
+aim:
+  sensitivity: 0.8  # Multiplicador de movimento (0.1 - 2.0)
+  max_movement: 50  # Movimento máximo por frame (pixels)
+
+# Suavização
+smoothing:
+  enabled: true
+  window_size: 3  # Número de frames para suavizar (2-10)
+
+# Performance
+performance:
+  limit_fps: false  # Limitar FPS máximo?
+  target_fps: 60  # FPS alvo se limit_fps = true
+
+# Atalhos (futuro)
+hotkeys:
+  toggle_pause: "F8"  # Pausar/Retomar
+  quit: "F9"  # Sair

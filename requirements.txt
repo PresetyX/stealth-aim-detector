@@ -1,0 +1,21 @@
+# Stealth AI Detector - Dependências Python
+
+# Core
+numpy>=1.24.0
+opencv-python>=4.8.0
+PyYAML>=6.0
+
+# Screen Capture
+mss>=9.0.0
+
+# Serial Communication
+pyserial>=3.5
+
+# ONNX Runtime com CUDA
+# Escolha a versão adequada:
+# - Para GPU NVIDIA: onnxruntime-gpu
+# - Para CPU apenas: onnxruntime
+onnxruntime-gpu>=1.20.0
+
+# Opcional: Bibliotecas YOLO (se quiser treinar seu próprio modelo)
+# ultralytics>=8.0.0
